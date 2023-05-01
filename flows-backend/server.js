@@ -8,6 +8,7 @@ connectDB();
 const app = express();
 
 const port = process.env.PORT || 5000;
+const uri = process.env.URI
 
 // MIDDLEWARE
 app.use(express.json());
@@ -19,7 +20,7 @@ app.listen(port, () => {
     console.log(`server is running on port ${port}`)
 })
 
-// mongoose.connect('mongodb+srv://admin:admin@cluster0.iy7no9q.mongodb.net/flows-backend')
+// mongoose.connect(uri)
 // .then(() => {
 //     app.listen(port, () => {
 //         console.log(`server is running on port ${port}`)
